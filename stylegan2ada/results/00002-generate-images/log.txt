@@ -1,0 +1,52 @@
+dnnlib: Running run_generator.generate_images() on localhost...
+Loading networks from "gdrive:networks/stylegan2-ffhq-config-f.pkl"...
+Setting up TensorFlow plugin "fused_bias_act.cu": Preprocessing... Loading... Done.
+Setting up TensorFlow plugin "upfirdn_2d.cu": Preprocessing... Failed!
+Traceback (most recent call last):
+  File "run_generator.py", line 168, in <module>
+    main()
+  File "run_generator.py", line 163, in main
+    dnnlib.submit_run(sc, func_name_map[subcmd], **kwargs)
+  File "D:\Coding\NTU\FYP\StyleGAN2 Source\dnnlib\submission\submit.py", line 343, in submit_run
+    return farm.submit(submit_config, host_run_dir)
+  File "D:\Coding\NTU\FYP\StyleGAN2 Source\dnnlib\submission\internal\local.py", line 22, in submit
+    return run_wrapper(submit_config)
+  File "D:\Coding\NTU\FYP\StyleGAN2 Source\dnnlib\submission\submit.py", line 280, in run_wrapper
+    run_func_obj(**submit_config.run_func_kwargs)
+  File "D:\Coding\NTU\FYP\StyleGAN2 Source\run_generator.py", line 21, in generate_images
+    _G, _D, Gs = pretrained_networks.load_networks(network_pkl)
+  File "D:\Coding\NTU\FYP\StyleGAN2 Source\pretrained_networks.py", line 76, in load_networks
+    G, D, Gs = pickle.load(stream, encoding='latin1')
+  File "D:\Coding\NTU\FYP\StyleGAN2 Source\dnnlib\tflib\network.py", line 297, in __setstate__
+    self._init_graph()
+  File "D:\Coding\NTU\FYP\StyleGAN2 Source\dnnlib\tflib\network.py", line 154, in _init_graph
+    out_expr = self._build_func(*self.input_templates, **build_kwargs)
+  File "<string>", line 498, in G_synthesis_stylegan2
+  File "<string>", line 468, in block
+  File "<string>", line 455, in layer
+  File "<string>", line 116, in modulated_conv2d_layer
+  File "D:\Coding\NTU\FYP\StyleGAN2 Source\dnnlib\tflib\ops\upfirdn_2d.py", line 292, in upsample_conv_2d
+    return _simple_upfirdn_2d(x, k, pad0=(p+1)//2+factor-1, pad1=p//2+1, data_format=data_format, impl=impl)
+  File "D:\Coding\NTU\FYP\StyleGAN2 Source\dnnlib\tflib\ops\upfirdn_2d.py", line 359, in _simple_upfirdn_2d
+    y = upfirdn_2d(y, k, upx=up, upy=up, downx=down, downy=down, padx0=pad0, padx1=pad1, pady0=pad0, pady1=pad1, impl=impl)
+  File "D:\Coding\NTU\FYP\StyleGAN2 Source\dnnlib\tflib\ops\upfirdn_2d.py", line 62, in upfirdn_2d
+    return impl_dict[impl](x=x, k=k, upx=upx, upy=upy, downx=downx, downy=downy, padx0=padx0, padx1=padx1, pady0=pady0, pady1=pady1)
+  File "D:\Coding\NTU\FYP\StyleGAN2 Source\dnnlib\tflib\ops\upfirdn_2d.py", line 140, in _upfirdn_2d_cuda
+    return func(x)
+  File "C:\Users\zhong\anaconda3\envs\tf-gpu-ver1x\lib\site-packages\tensorflow\python\ops\custom_gradient.py", line 162, in decorated
+    return _graph_mode_decorator(f, *args, **kwargs)
+  File "C:\Users\zhong\anaconda3\envs\tf-gpu-ver1x\lib\site-packages\tensorflow\python\ops\custom_gradient.py", line 183, in _graph_mode_decorator
+    result, grad_fn = f(*args)
+  File "D:\Coding\NTU\FYP\StyleGAN2 Source\dnnlib\tflib\ops\upfirdn_2d.py", line 132, in func
+    y = _get_plugin().up_fir_dn2d(x=x, k=kc, upx=upx, upy=upy, downx=downx, downy=downy, padx0=padx0, padx1=padx1, pady0=pady0, pady1=pady1)
+  File "D:\Coding\NTU\FYP\StyleGAN2 Source\dnnlib\tflib\ops\upfirdn_2d.py", line 15, in _get_plugin
+    return custom_ops.get_plugin(os.path.splitext(__file__)[0] + '.cu')
+  File "D:\Coding\NTU\FYP\StyleGAN2 Source\dnnlib\tflib\custom_ops.py", line 111, in get_plugin
+    _run_cmd(_prepare_nvcc_cli('"%s" --preprocess -o "%s" --keep --keep-dir "%s"' % (cuda_file, tmp_file, tmp_dir)))
+  File "D:\Coding\NTU\FYP\StyleGAN2 Source\dnnlib\tflib\custom_ops.py", line 61, in _run_cmd
+    raise RuntimeError('NVCC returned an error. See below for full command line and output log:\n\n%s\n\n%s' % (cmd, output))
+RuntimeError: NVCC returned an error. See below for full command line and output log:
+
+nvcc "D:\Coding\NTU\FYP\StyleGAN2 Source\dnnlib\tflib\ops\upfirdn_2d.cu" --preprocess -o "C:\Users\zhong\AppData\Local\Temp\tmply0poyl1\upfirdn_2d_tmp.cu" --keep --keep-dir "C:\Users\zhong\AppData\Local\Temp\tmply0poyl1" --disable-warnings --include-path "C:\Users\zhong\anaconda3\envs\tf-gpu-ver1x\lib\site-packages\tensorflow\include" --include-path "C:\Users\zhong\anaconda3\envs\tf-gpu-ver1x\lib\site-packages\tensorflow\include\external\protobuf_archive\src" --include-path "C:\Users\zhong\anaconda3\envs\tf-gpu-ver1x\lib\site-packages\tensorflow\include\external\com_google_absl" --include-path "C:\Users\zhong\anaconda3\envs\tf-gpu-ver1x\lib\site-packages\tensorflow\include\external\eigen_archive" --compiler-bindir "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64" 2>&1
+
+^C
