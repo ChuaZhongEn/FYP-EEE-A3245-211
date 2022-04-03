@@ -1,0 +1,59 @@
+QMainWindow {
+    background-color: #121212;
+    color: #d6d6d6;
+}
+
+QMenuBar {
+    background-color: #121212;
+    color: #d6d6d6;
+}
+
+QMessageBox {
+    background-color: #121212;
+    color: #d6d6d6;
+}
+
+QLabel {
+    background-color: #121212;
+    color: #d6d6d6;
+}
+
+QLineEdit {
+    background-color: #202124;
+    color: #d6d6d6;
+}
+
+QTextEdit {
+    background-color: #202124;
+    color: #d6d6d6;
+}
+
+QListWidget {
+    background-color: #202124;
+    color: #d6d6d6;
+}
+
+QGroupBox {
+    background-color: #121212;
+    color: #d6d6d6;
+}
+
+QTabWidget {
+    background-color: #121212;
+    color: #d6d6d6;
+    border: 1px solid #121212;
+}
+
+QTabWidget::pane {
+    border: 1px solid white;
+}
+
+QFrame {
+    background-color: #121212;
+    color: #d6d6d6;
+    border: 0;
+}
+
+QLabel {
+    font-size: 14px;
+}
