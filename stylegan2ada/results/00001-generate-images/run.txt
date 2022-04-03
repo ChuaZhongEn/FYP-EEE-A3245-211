@@ -1,1 +1,0 @@
-{'host_name': 'localhost', 'start_time': '2021-07-28 21:31:09.748832', 'stop_time': '2021-07-28 21:31:09.750826', 'task_name': 'zhong-00001-generate-images'}
