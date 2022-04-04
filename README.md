@@ -51,7 +51,7 @@ The pretrained network can be downloaded [here](https://drive.google.com/file/d/
 
 ![Picture2](https://user-images.githubusercontent.com/67497833/161480413-8410f33f-7b17-4793-8473-7801bb896e40.png)
 
-How to use the GUI
+### How to use the GUI
 1. Select the downloaded pretrained network 
    - Upon select, the network will be initialised automatically. 
    - NOTE: The GUI may freeze temporarily as the network is being initialized.
@@ -69,7 +69,7 @@ How to use the GUI
    - The save directory must be selected.
    - Go to the desired row and click 'Save'.
 
-Extra:
+### GUI Extra:
 1. (E1) To transform multiple faces, click on the 'Add New Seed' button.
    - Only works when the latest added seed is generated/loaded.
 2. (E2) To reset the GUI, click on the 'Reset' button.
