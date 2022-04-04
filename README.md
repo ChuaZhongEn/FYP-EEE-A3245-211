@@ -62,11 +62,11 @@ How to use the GUI
    - Go to the desired row and click 'Save'.
 
 Extra:
-E1. To transform multiple faces, click on the 'Add New Seed' button.
+1. (E1) To transform multiple faces, click on the 'Add New Seed' button.
    - Only works when the latest added seed is generated/loaded.
-E2. To reset the GUI, click on the 'Reset' button.
+2. (E2) To reset the GUI, click on the 'Reset' button.
    - NOTE: All unsaved data will be lost.
-E3. The following transformation data is saved:
+3. The following transformation data is saved:
    - Coefficients data (Coefficient, Intensity, Scale)
    - Image data (Seed, Original Latent Vector, Transformed Latent Vector)
    - A PNG image of the original and transformed face.
