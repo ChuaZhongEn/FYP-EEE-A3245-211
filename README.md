@@ -22,6 +22,14 @@ This repository contains the scripts used in Final Year Project - Face Transform
 | 3_Face_Transformation_GUI.ipynb | Notebook for Face Transformation GUI application
 
 ## Requirements
+Libraries version used:
+
+1. PyTorch 1.10.0
+2. Numpy 1.21.4
+3. Pathlib
+4. PIL 8.0.0
+5. Matplotlib 3.5.0
+6. PyQt5
 
 ## How to use
 The following notebooks are designed to be run in a Google Colab notebook without any modifications required. <br>
