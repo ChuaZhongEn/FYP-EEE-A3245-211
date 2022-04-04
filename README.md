@@ -1,4 +1,4 @@
-# FYP-EEE-A3245-211 - Face Transformation using StyleGAN
+# FYP-EEE-A3245-211 <br> Face Transformation using StyleGAN
 
 ## Nanyang Technological University
 
