@@ -41,19 +41,19 @@ Loading of a transformed seed or projected face is not supported. <br>
 
 The pretrained network can be downloaded [here](https://drive.google.com/file/d/1igxv6ZP4TFGe_392B-qnSqXnglTKH5yo/view?usp=sharing).
 
-![Screenshot (138)](https://user-images.githubusercontent.com/67497833/161477373-9a54c27a-ff19-4c82-a6a7-b662d12a4a5c.png)
+![Picture2](https://user-images.githubusercontent.com/67497833/161480413-8410f33f-7b17-4793-8473-7801bb896e40.png)
 
 How to use the GUI
-1. Select the downloaded pretrained network
+1. Select the downloaded pretrained network 
    - Upon select, the network will be initialised automatically. 
    - NOTE: The GUI may freeze temporarily as the network is being initialized.
 2. Select the coefficient foldder
    - Select either the SVC or SVR folder
    - The files within the selected folder will be loaded and the GUI will be updated automatically.
 3. Generate an image OR Load a projected image
-   - To generate an image
+   - 3.1. To generate an image
       - Select the Generate Seed Tab, choose the desired seed using the spinbox and click on 'Generate' button
-   - To load an projected image
+   - 3.2. To load an projected image
       - Select the Load Projected Face Tab, select the projected .npz file and click on 'Load' button
 4. Adjust the sliders/spinbox on the left to transform the generated/loaded face.
    - The transformed face will be updated automatically.
@@ -62,9 +62,11 @@ How to use the GUI
    - Go to the desired row and click 'Save'.
 
 Extra:
-1. To transform multiple faces, click on the 'Add New Seed' button.
+E1. To transform multiple faces, click on the 'Add New Seed' button.
    - Only works when the latest added seed is generated/loaded.
-2. The following transformation data is saved:
+E2. To reset the GUI, click on the 'Reset' button.
+   - NOTE: All unsaved data will be lost.
+E3. The following transformation data is saved:
    - Coefficients data (Coefficient, Intensity, Scale)
    - Image data (Seed, Original Latent Vector, Transformed Latent Vector)
    - A PNG image of the original and transformed face.
