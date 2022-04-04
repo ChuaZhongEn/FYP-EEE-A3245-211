@@ -33,15 +33,15 @@ Libraries version used:
 
 ## How to use
 The following notebooks are designed to be run in a Google Colab notebook without any modifications required. <br>
-1. 0_Image_Generator.ipynb
+1. **0_Image_Generator.ipynb**
    - Optional: Use this notebook to generate and save StyleGAN2 images.
-3. 1_Learnging_StyleGAN_Image_Synthesis_Controls.ipynb
+3. **1_Learnging_StyleGAN_Image_Synthesis_Controls.ipynb**
    - This notebook contain the steps involved in learning control for StyleGAN2 image synthesis using Support Vector Regression (SVR) and Support Vector Classifier (SVC).
-5. 2_StyleGAN_Image_Projection.ipynb
+5. **2_StyleGAN_Image_Projection.ipynb**
    - This notebook contain the steps involved in projecting a real photograph into the StyleGAN2 latent space.
 
 ## Face Transformation GUI
-Note: This GUI is built using PyQt which is not supported in Google Colab. <br>
+**Note**: This GUI is built using PyQt which is not supported in Google Colab. <br>
 This notebook must be run in a separate IDE (e.g. Visual Studio Code). <br>
 
 This GUI serves as a tool to visualize the Face Transformation using the learned coefficients. <br>
@@ -73,7 +73,7 @@ Extra:
 1. (E1) To transform multiple faces, click on the 'Add New Seed' button.
    - Only works when the latest added seed is generated/loaded.
 2. (E2) To reset the GUI, click on the 'Reset' button.
-   - NOTE: All unsaved data will be lost.
+   - All unsaved data will be lost.
 3. The following transformation data is saved:
    - Coefficients data (Coefficient, Intensity, Scale)
    - Image data (Seed, Original Latent Vector, Transformed Latent Vector)
