@@ -34,8 +34,37 @@ The following notebooks are designed to be run in a Google Colab notebook withou
 
 ## Face Transformation GUI
 Note: This GUI is built using PyQt which is not supported in Google Colab. <br>
-This notebook must be run in a separate IDE (e.g. Visual Studio Code).
+This notebook must be run in a separate IDE (e.g. Visual Studio Code). <br>
+
+This GUI serves as a tool to visualize the Face Transformation using the learned coefficients. <br>
+Loading of a transformed seed or projected face is not supported. <br>
+
+The pretrained network can be downloaded [here](https://drive.google.com/file/d/1igxv6ZP4TFGe_392B-qnSqXnglTKH5yo/view?usp=sharing).
 
 ![Screenshot (138)](https://user-images.githubusercontent.com/67497833/161477373-9a54c27a-ff19-4c82-a6a7-b662d12a4a5c.png)
 
-The pretrained network can be downloaded [here](https://drive.google.com/file/d/1igxv6ZP4TFGe_392B-qnSqXnglTKH5yo/view?usp=sharing) and must be placed in the GUI Resources folder. 
+How to use the GUI
+1. Select the downloaded pretrained network
+   - Upon select, the network will be initialised automatically. 
+   - NOTE: The GUI may freeze temporarily as the network is being initialized.
+2. Select the coefficient foldder
+   - Select either the SVC or SVR folder
+   - The files within the selected folder will be loaded and the GUI will be updated automatically.
+3. Generate an image OR Load a projected image
+   - To generate an image
+      - Select the Generate Seed Tab, choose the desired seed using the spinbox and click on 'Generate' button
+   - To load an projected image
+      - Select the Load Projected Face Tab, select the projected .npz file and click on 'Load' button
+4. Adjust the sliders/spinbox on the left to transform the generated/loaded face.
+   - The transformed face will be updated automatically.
+5. Save the transformation data .
+   - The save directory must be selected.
+   - Go to the desired row and click 'Save'.
+
+Extra:
+1. To transform multiple faces, click on the 'Add New Seed' button.
+   - Only works when the latest added seed is generated/loaded.
+2. The following transformation data is saved:
+   - Coefficients data (Coefficient, Intensity, Scale)
+   - Image data (Seed, Original Latent Vector, Transformed Latent Vector)
+   - A PNG image of the original and transformed face.
