@@ -2,7 +2,7 @@
 
 ## Nanyang Technological University
 
-This repository contains the scripts used in Final Year Project - Face Transformation using StyleGAN.
+This repository contains the codes and resources used in Final Year Project - Face Transformation using StyleGAN.
 
 ![Picture1](https://user-images.githubusercontent.com/67497833/161471635-5c19489d-884f-4ee1-8b44-da977afb83ab.png)
 
