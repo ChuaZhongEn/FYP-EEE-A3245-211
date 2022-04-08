@@ -44,6 +44,8 @@ The following notebooks are designed to be run in a Google Colab notebook withou
 **Note**: This GUI is built using PyQt which is not supported in Google Colab. <br>
 This notebook must be run in a separate IDE (e.g. Visual Studio Code). <br>
 
+**Note**: This GUI is simply a protoype and may contain bugs...
+
 This GUI serves as a tool to visualize the Face Transformation using the learned coefficients. <br>
 Loading of a transformed seed or projected face is not supported. <br>
 
