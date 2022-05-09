@@ -2,7 +2,8 @@
 
 ## Nanyang Technological University
 
-This repository contains the codes and resources used in Final Year Project - Face Transformation using StyleGAN.
+This repository contains the codes and resources used in Final Year Project - Face Transformation using StyleGAN. <br>
+The powerpoint slides can be downloaded [here](https://docs.google.com/presentation/d/1GhLdLFugR2s5dBAUWOJytN5W4oLvw7vV/edit?usp=sharing&ouid=117264117817618106602&rtpof=true&sd=true)
 
 ![Picture1](https://user-images.githubusercontent.com/67497833/161471635-5c19489d-884f-4ee1-8b44-da977afb83ab.png)
 
